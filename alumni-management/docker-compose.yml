@@ -1,0 +1,24 @@
+version: '3.5'
+
+networks:
+  alumni-management:
+    name: alumni-management
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:24.0.2
+    hostname: keycloak
+    networks:
+      - alumni-management
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    volumes:
+      - keycloak-data:/opt/keycloak/data
+    command: start-dev
+    ports:
+      - 8080:8080
+
+volumes:
+  keycloak-data:
+    driver: local

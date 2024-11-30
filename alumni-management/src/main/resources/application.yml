@@ -1,0 +1,57 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: alumni-management
+  config:
+    import: env.properties
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driverClassName: org.postgresql.Driver
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: auth-app
+            authorization-grant-type: authorization_code
+            scope: openid
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/realms/alumni-management
+            user-name-attribute: preferred_username
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/alumni-management
+
+logging:
+  level:
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+        SQL: DEBUG
+      springframework:
+        security: DEBUG
+    com:
+      alumnimanagement: TRACE
+
+keycloak:
+  applicationRealm: alumni-management
+  clientId: admin-cli
+  username: keycloak-admin
+  password: keycloak-admin
+  serverBaseUrl: http://localhost:8080
+  grantType: password
+  realmClientId: auth-app
+  realmClientSecret: hLZjlie4YZVFcr4iXkELkzvHIyiHigDq
+  realmDefaultRole: default-roles-alumni-management
