@@ -1,6 +1,8 @@
 package com.alumnimanagement.config;
 
+import com.alumnimanagement.entity.Job;
 import com.alumnimanagement.entity.User;
+import com.alumnimanagement.web.dto.JobDTO;
 import com.alumnimanagement.web.dto.UserDTO;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;

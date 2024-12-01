@@ -6,6 +6,7 @@ import com.alumnimanagement.web.dto.UserDTO;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.List;
 
 public interface UserService {
 
@@ -14,6 +15,8 @@ public interface UserService {
     LoginResponseDTO loginUser(LoginRequestDTO loginRequestDTO) throws IOException;
 
     UserDTO getUserDetails(String userId);
+
+    List<UserDTO> getUserList();
 
     boolean logout(String refreshToken, String userId) throws IOException;
 

@@ -96,6 +96,7 @@ public class UserServiceImpl implements UserService {
                 .id(userId)
                 .role(userDTO.getRole())
                 .email(userDTO.getEmail())
+                .password("ami@12345")
                 .name(userDTO.getName())
                 .mobileNo("1234567891")
                 .dateOfGraduation(userDTO.getDateOfGraduation())
@@ -193,6 +194,13 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findById(userId).orElseThrow(
                 ()-> new UserNotFoundException("User not exist in db"));
         return mapperFacade.map(user,UserDTO.class);
+    }
+
+    @Override
+    public List<UserDTO> getUserList() {
+
+        List<User> userList = this.userRepository.findAll();
+        return userList.stream().map(user->mapperFacade.map(user, UserDTO.class)).toList();
     }
 
     @Override
