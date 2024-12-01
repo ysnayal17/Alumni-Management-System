@@ -39,7 +39,7 @@ public class User {
     @Column(nullable = false)
     private Department department;
 
-    @Column(unique = true, length = 10, nullable = false)
+    @Column(length = 10, nullable = false)
     private String mobileNo;
 
     private String linkedinProfile;
