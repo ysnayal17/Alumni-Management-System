@@ -1,15 +1,49 @@
 # Alumni Management System
 
-The Alumni Management System is a web application designed to manage alumni information, events, and other related activities. It consists of a backend built with Spring Boot and a frontend built with React.
+The Alumni Management System is a comprehensive platform designed to manage alumni information, events, and other related activities. The project aims to facilitate better communication and engagement between alumni and the institution, providing a centralized platform for managing alumni data, organizing events, and fostering a strong alumni network.
 
 ## Table of Contents
 
+- [Objective](#objective)
+- [Technologies](#technologies)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
 - [Frontend](#frontend)
+
+## Objective
+The Alumni Management System aims to provide a robust platform for managing alumni information, organizing events, and facilitating communication between alumni and the institution. The project is designed to enhance alumni engagement, streamline event management, and provide valuable insights into alumni activities and contributions.
+
+## Technologies
+
+   - Frontend:
+     
+      The frontend of the Alumni Management System is developed using React JS, a popular JavaScript library for building user interfaces. React JS provides a modern and efficient approach to building web applications and allows for seamless updates and modifications.
+
+   - Backend:
+
+      The backend of the Alumni Management System is developed using Spring Boot, a powerful framework for building Java-based applications. Spring Boot provides a scalable and efficient way to handle server-side logic and database interactions.
+   
+   - Authentication and Authorization:
+
+     Keycloak which is an open source Identity and Access Management solution is used to manage user authentication, authorization, and secure access to the application. This integration ensures that only authorized users can access specific resources and perform certain actions within the system. 
+
+   - Database:
+     
+      The Alumni Management System uses PostgreSQL, a powerful and reliable relational database, to store and manage data. PostgreSQL provides robust data storage capabilities and supports complex queries and indexing.
+
+   - Containerization:
+     
+     To streamline the development and management of dependent services, Docker is utilized to run and manage essential services required by the application. This includes:
+
+      - Service Isolation: Each service is containerized, ensuring they run in isolated environments with no conflicts.
+      Portability: Docker containers provide a consistent runtime environment, making it easy to replicate the setup across development, testing, and production.
+      Ease of Dependency Management: All dependencies are defined in Dockerfile and docker-compose.yml, ensuring seamless setup and consistency for all team members.
+      - Quick Setup: With a single docker-compose up command, all dependent services are started and configured, reducing setup time.
+     
+   
 
 ## Features
 
