@@ -53,5 +53,5 @@ keycloak:
   serverBaseUrl: http://localhost:8080
   grantType: password
   realmClientId: auth-app
-  realmClientSecret: hLZjlie4YZVFcr4iXkELkzvHIyiHigDq
+  realmClientSecret: YlE1aiU8zuKisAad9XyyPc0s06RazHLl
   realmDefaultRole: default-roles-alumni-management

@@ -17,7 +17,6 @@ public class Event {
     private String id;
     @Column(nullable = false)
     private LocalDateTime datetime;
-
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
@@ -28,4 +27,50 @@ public class Event {
     private String description;
     @Column(nullable = false)
     private String registrationLink;
+
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
+    public LocalDateTime getDatetime() {
+        return datetime;
+    }
+    public void setDatetime(LocalDateTime datetime) {
+        this.datetime = datetime;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getSpeaker() {
+        return speaker;
+    }
+    public void setSpeaker(String speaker) {
+        this.speaker = speaker;
+    }
+    public String getLocation() {
+        return location;
+    }
+    public void setLocation(String location) {
+        this.location = location;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    public String getRegistrationLink() {
+        return registrationLink;
+    }
+    public void setRegistrationLink(String registrationLink) {
+        this.registrationLink = registrationLink;
+    }
+
+
+   
 }

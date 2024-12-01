@@ -84,7 +84,7 @@ public class UserServiceImpl implements UserService {
             addRole(userId, userDTO.getRole());
             userRepository.save(user);
         }else{
-            log.info("not able to create user check provided user details");
+            log.info("not able to create user check provided user details"+response.getStatus());
             throw new RuntimeException("not able to create user check provided user details");
         }
     }
