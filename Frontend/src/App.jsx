@@ -10,6 +10,9 @@ import {
   Navigate,
 } from "react-router-dom";
 import Home from "./pages/Home.jsx";
+import AlumnisLIst from "./pages/AlumnisLIst.jsx";
+import Event from "./pages/Event";
+import JobsList from "./pages/JobsList.jsx";
 function App() {
   //states
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -35,8 +38,38 @@ function App() {
           <Route
             path="/home"
             element={
-              isAuthenticated ? (
+              true ? (
                 <Home setIsAuthenticated={setIsAuthenticated} />
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
+          />
+          <Route
+            path="/alumnis"
+            element={
+              true ? (
+                <AlumnisLIst setIsAuthenticated={setIsAuthenticated} />
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
+          />
+          <Route
+            path="/jobs"
+            element={
+              true ? (
+                <JobsList setIsAuthenticated={setIsAuthenticated} />
+              ) : (
+                <Navigate to="/login" />
+              )
+            }
+          />
+          <Route
+            path="/events"
+            element={
+              true ? (
+                <Event setIsAuthenticated={setIsAuthenticated} />
               ) : (
                 <Navigate to="/login" />
               )

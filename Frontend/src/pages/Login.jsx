@@ -27,7 +27,7 @@ const Login = ({setIsAuthenticated, isAuthenticated}) => {
       //   password,
       // });
       setIsAuthenticated(true);
-      
+      window.location.pathname = "/home";
       // Check for successful login
     //   if (response.status === 200) {
     //     toast.success("Login successful!");

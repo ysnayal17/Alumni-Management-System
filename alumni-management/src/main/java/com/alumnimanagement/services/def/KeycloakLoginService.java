@@ -23,17 +23,6 @@ public interface KeycloakLoginService {
 
     @Headers("Content-Type: application/x-www-form-urlencoded")
     @FormUrlEncoded
-    @POST("/realms/{realm}/protocol/openid-connect/token")
-    Call<LoginResponseDTO> regenerateToken(
-            @Field("grant_type") String grantType,
-            @Field("client_id") String clientId,
-            @Field("client_secret") String clientSecret,
-            @Field("refresh_token") String refreshToken,
-            @retrofit2.http.Path("realm") String realm
-    );
-
-    @Headers("Content-Type: application/x-www-form-urlencoded")
-    @FormUrlEncoded
     @POST("/realms/{realm}/protocol/openid-connect/logout")
     Call<String> logout(
             @Field("client_id") String clientId,
