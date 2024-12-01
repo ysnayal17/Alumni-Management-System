@@ -10,8 +10,6 @@ The Alumni Management System is a web application designed to manage alumni info
 - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
 - [Frontend](#frontend)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
